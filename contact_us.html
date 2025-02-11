@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <nav class="navbar">
+        <div class="logo">
+            <a href="#">MySite</a>
+            <h4>TravelBloom</h4>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Contact Us </a></li>
+            
+        </ul>
+
+    </nav>
+    <form action="submit_form.php" method="POST" class="contact-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

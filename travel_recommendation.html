@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation</title>
+    <link rel="stylesheet" href="travel_recommendation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body> 
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">MySite</a>
+            <h4>TravelBloom</h4>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="about_us.html">About</a></li>
+            <li><a href="#services">Contact Us </a></li>
+            
+        </ul>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Enter search keywords...">
+            <button id="search-button">Search</button>
+            <button id="reset-button" onlick="ClearBtn()"">Reset</button>
+        </div>
+    </nav>
+    <div class="body-wrapper">
+    <div id="results-container">
+        <h2>Search Results</h2>
+        <ul id="results-list">
+            <script>
+                // Fetch the data from the travel_recommendation_api.json file
+                fetch('travel_recommendation_api.json')  // Make sure the path is correct
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Log the fetched data to the console to check if it's being accessed
+                        console.log(data);
+            
+                        // Iterate over the data and display travel details
+                        const placesContainer = document.getElementById('places-container');
+            
+                        data.forEach(place => {
+                            // Create an element for each travel place
+                            const placeElement = document.createElement('div');
+                            placeElement.classList.add('place');
+            
+                            // Add name and description
+                            placeElement.innerHTML = `
+                                <h3>${place.name}</h3>
+                                <p>${place.description}</p>
+                                <img src="images/${place.imageUrl}" alt="${place.name}" width="300">
+                            `;
+            
+                            // Append the new element to the places container
+                            placesContainer.appendChild(placeElement);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('There was an error fetching the data:', error);
+                    });
+            </script>
+        </ul>
+    </div>
+    <div class="introduction">
+        <h1>EXPLORE DREAM DESTINATION'</h1>
+        <p> Welcome to TravelExplorer, your ultimate destination for discovering unforgettable travel experiences! Whether you're seeking relaxing beach getaways, adventurous mountain treks, or cultural city escapes, we provide personalized recommendations to help you explore the world. </p>
+    </div>
+    <div class="social-media">
+        <div class="vertical-line"></div>
+        <a href="https://twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+        </a>
+        <a href="https://facebook.com" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+        </a>
+        <a href="https://instagram.com" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+        </a>
+        <a href="https://youtube.com" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i> <!-- YouTube Icon -->
+        </a>
+    </div>
+    
+</div>
+</body>
+</html>

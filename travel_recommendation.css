@@ -1,0 +1,300 @@
+
+
+/* Basic reset for some elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Nav bar style */
+.navbar {
+    background-color: black;  /* Set the background color to black */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+/* Logo section */
+.navbar .logo {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .logo h4 {
+    color: white;
+    font-size: 14px;
+}
+
+/* Nav links style */
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    margin: 0 20px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #4CAF50;  /* Change color on hover */
+}
+
+/* Search container style */
+.navbar .search-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .search-container input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+.navbar .search-container button {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .search-container button:hover {
+    background-color: #4CAF50;  /* Change color on hover */
+}
+
+.navbar .search-container button:active {
+    background-color: #4CAF50;  /* Change color on click */
+}
+
+/* For mobile responsiveness, you may want to stack the elements */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+    }
+    .navbar .nav-links li {
+        margin: 10px 0;
+    }
+    .navbar .search-container {
+        margin-top: 10px;
+    }
+}
+
+  
+/* Set the background image using an external URL */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; /* Cover the entire page */
+    background-position: center center; /* Center the image */
+    background-attachment: fixed; /* Keep the background fixed when scrolling */
+    height: 100vh; /* Make sure the body takes full height of the viewport */
+}
+
+
+/* Basic styling for the social media icons container */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+
+    flex-direction: column;
+}
+
+
+
+.social-icon i {
+    font-size: 30px; /* Icon size */
+    color: #fff;     /* Default color */
+    transition: color 0.3s ease;
+}
+
+
+.social-icon i:hover {
+    opacity: 0.7;  /* Slight transparency on hover */
+}
+
+
+
+.vertical-line {
+    position: absolute;
+    top: 84px;
+    bottom: 0;
+    width: 2px;
+    background-color: white;
+    height: 238px;
+}
+
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+.introduction{
+    width: 600px;
+    margin: 150px 0 0 150px;
+    color:#fff;
+}
+
+.introduction h1{
+    font-size: 46px;
+    margin-bottom: 20px;
+    line-height: 70px;
+}
+
+.introduction p{
+    width: 300px;
+}
+
+.body-wrapper{
+    display: flex
+;
+    flex-direction: row-reverse;
+    justify-content: start;
+    height: 100%;;
+}
+
+.about-us{
+    color:#fff;
+    color: #fff;
+    width: 850px;
+    margin: 50px 0 0 100px;
+}
+
+.about-us p{
+    margin-top: 30px;
+    line-height: 22px;
+}
+
+.body-wrapper-about-us{
+    display: flex;
+    height: 100%;
+}
+
+/* Section styles */
+.our-team {
+    text-align: center;
+    
+  
+}
+
+/* Heading style */
+.our-team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+/* Team container (Flexbox layout) */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+/* Team member styles */
+.team-member {
+    background-color: rgba(0, 0, 255, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Team photo */
+.team-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Member name style */
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 10px 0;
+}
+
+/* Member role style */
+.role {
+    font-size: 1rem;
+    color: #fff;
+    font-style: italic;
+    background-color: #007BFF;
+    border-radius: 5px;
+    padding:5px;
+}
